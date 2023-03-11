@@ -1,4 +1,4 @@
-from flask import Flask,send_file
+from flask import Flask,send_file,abort,redirect
 from flask_cors import CORS, cross_origin
 import json
 
@@ -33,12 +33,18 @@ def search(entry):
                         deep_scan = country
                         break
                 
-    return first_scan if first_scan is not None else intermidiate_scan if intermidiate_scan is not None else deep_scan if deep_scan is not None else {}
+    return first_scan if first_scan is not None else intermidiate_scan if intermidiate_scan is not None else deep_scan if deep_scan is not None else abort(404)
        
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS']='Content-Type'
+
+@app.route('/')
+@app.route('/<anymatch>')
+@cross_origin()
+def route(anymatch=None):
+    return redirect("/api/v1/country/TN")
 
 @app.route('/api/v1/country/<entry>')
 @cross_origin()
@@ -46,9 +52,9 @@ def getCountry(entry):
     return search(entry)
 
 @app.route('/api/v1/country/flag/<entry>')
+@cross_origin()
 def getFlag(entry):
     requested = search(entry)
-    if requested != {}: return send_file(f"{data_path}flags/{requested['alpha-2']}.png", mimetype='image/png')
-    else: return {}
+    return send_file(f"{data_path}flags/{requested['alpha-2']}.png", mimetype='image/png')
 
 if __name__ == '__main__': app.run(port=int(config['port']))
