@@ -1,4 +1,4 @@
-# **Country Information API Service**
+# **Country Informations API Service**
 
 This Country Information API Service is designed to retrieve informations and flag images about any country.
 
