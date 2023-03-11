@@ -43,5 +43,5 @@ This Country Information API Service is designed to retrieve informations and fl
     
 
 ## **Acknowledgements :**
-The data source : https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes
-The flags picture : https://countryflagsapi.com 
+Data source : https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes
+Flags picture : https://countryflagsapi.com 
