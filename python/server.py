@@ -51,4 +51,4 @@ def getFlag(entry):
     if requested != {}: return send_file(f"{data_path}flags/{requested['alpha-2']}.png", mimetype='image/png')
     else: return {}
 
-if __name__ == '__main__': app.run(port=int(config['port']), debug=True)
+if __name__ == '__main__': app.run(port=int(config['port']))
