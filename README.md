@@ -14,7 +14,6 @@ This Country Information API Service is designed to retrieve informations and fl
 3. Send a GET request to the following endpoint:where **`<country_code>`** is the name of the country you want information about.
     
     ```
-    bashCopy code
     http://localhost:105/api/v1/country/country_code
     ```
     
