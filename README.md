@@ -20,19 +20,19 @@ This Country Information API Service is designed to retrieve informations and fl
 4. The API will return a JSON object with the following information:
     
     ```
-    {
-            "name": "Afghanistan",
-            "alpha-2": "AF",
-            "alpha-3": "AFG",
-            "country-code": "004",
-            "iso_3166-2": "ISO 3166-2:AF",
-            "region": "Asia",
-            "sub-region": "Southern Asia",
-            "intermediate-region": "",
-            "region-code": "142",
-            "sub-region-code": "034",
-            "intermediate-region-code": ""
-     }
+   {
+        "name": "Australia",
+        "alpha-2": "AU",
+        "alpha-3": "AUS",
+        "country-code": "036",
+        "iso_3166-2": "ISO 3166-2:AU",
+        "region": "Oceania",
+        "sub-region": "Australia and New Zealand",
+        "intermediate-region": "",
+        "region-code": "009",
+        "sub-region-code": "053",
+        "intermediate-region-code": ""
+    }
     ```
     
 5. Send a GET request to the following endpoint:where **`<country_code>`** is the name of the country you want to get its flag.
