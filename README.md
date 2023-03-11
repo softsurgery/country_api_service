@@ -8,7 +8,7 @@ This Country Information API Service is designed to retrieve informations and fl
 2. Run the app using the following command:
     
     ```
-    python app.py
+    python python/server.py
     ```
     
 3. Send a GET request to the following endpoint:where **`<country_code>`** is the name of the country you want information about.
