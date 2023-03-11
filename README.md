@@ -11,10 +11,10 @@ This Country Information API Service is designed to retrieve informations and fl
     python python/server.py
     ```
     
-3. Send a GET request to the following endpoint:where **`<country_code>`** is the name of the country you want information about.
+3. Send a GET request to the following endpoint: where **`<query>`** is the keyword related to the country you want information about.
     
     ```
-    http://localhost:105/api/v1/country/country_code
+    http://localhost:105/api/v1/country/<query>
     ```
     
 4. The API will return a JSON object with the following information:
@@ -35,12 +35,13 @@ This Country Information API Service is designed to retrieve informations and fl
     }
     ```
     
-5. Send a GET request to the following endpoint:where **`<country_code>`** is the name of the country you want to get its flag.
+5. Send a GET request to the following endpoint:where **`<query>`** is the keyword related to the country you want to get its flag.
     
     ```
-    http://localhost:105/api/v1/country/flag/country_code
+    http://localhost:105/api/v1/country/flag/<query>
     ```
     
 
 ## **Acknowledgements :**
-https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes/blob/master/all/all.csv
+The data source : https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes
+The flags picture : https://countryflagsapi.com 
