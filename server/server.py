@@ -40,12 +40,6 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS']='Content-Type'
 
-@app.route('/')
-@app.route('/<anymatch>')
-@cross_origin()
-def route(anymatch=None):
-    return redirect("/api/v1/country/TN")
-
 @app.route('/api/v1/country/<entry>')
 @cross_origin()
 def getCountry(entry):
@@ -56,5 +50,13 @@ def getCountry(entry):
 def getFlag(entry):
     requested = search(entry)
     return send_file(f"{data_path}flags/{requested['alpha-2']}.png", mimetype='image/png')
+
+@app.route('/')
+@app.route('/<anymatch>')
+@app.route('/<anymatch>/<path:rest>')
+@cross_origin()
+def route(anymatch=None,rest=None):
+    return redirect("/api/v1/country/TN")
+
 
 if __name__ == '__main__': app.run(port=int(config['port']))
