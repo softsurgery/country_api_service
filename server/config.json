@@ -1,5 +1,4 @@
 {
-    "port" : "105",
-    "scanLevel" : 2,
-    "dataPath" : "../data/"
+    "dataPath":"../data",
+    "port":105
 }
