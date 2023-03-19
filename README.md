@@ -43,6 +43,7 @@ This Country Information API Service is designed to retrieve informations and fl
     
 
 ## **Acknowledgements :**
-Data source : https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes
-
+Data Sources : 
+https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes
+https://restcountries.com
 Flags picture : https://countryflagsapi.com 
