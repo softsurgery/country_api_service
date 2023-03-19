@@ -39,5 +39,4 @@ def getFlag(entry):
 def route(anymatch=None,rest=None):
     return redirect("/api/v1/country/TN")
 
-
 if __name__ == '__main__': app.run(port=int(config['port']))
