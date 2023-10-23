@@ -1,10 +1,10 @@
-"""from os import path
-import requests
+from os import path
 import shutil 
 import time
 import html
 import json
 import sys
+import requests
 
 def download_image(url,file_name):
     res = requests.get(url, stream = True)
@@ -33,9 +33,8 @@ def migrate_ph1():
         } for item in items
     ]
     dictToJson("./data/ISO-3166-Countries-with-Regional-Codes.json", newItems)
-"""
-import requests
-import json
+
+
 
 url = f'https://restcountries.com/v2/alpha/'
 
