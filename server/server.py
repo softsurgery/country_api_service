@@ -1,15 +1,8 @@
 from flask import Flask,send_file,abort,redirect
 from flask_cors import CORS, cross_origin
-import json
-import os
+from static import jsonToDict,navigate
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-os.chdir(script_dir) 
-
-def jsonToDict(json_file):
-    with open(json_file,encoding="utf-8") as f:
-        data = json.load(f)
-    return data
+navigate()
 
 countries = jsonToDict("data.json")
 
